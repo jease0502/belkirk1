@@ -4,36 +4,26 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
-- type: heading
-  label: Content
+- type: directory
+  path: https://jease0502.github.io/index.html
+  label: Home
+  create: all
+  match: "**/*"
+- type: directory
+  path: https://jease0502.github.io/about.html
+  label: About
+  create: all
+  match: "**/*"
+- type: directory
+  path: https://jease0502.github.io/contact.html
+  label: Contact
+  create: all
+  match: "**/*"
 - type: jekyll-posts
   label: Posts
   create: all
   templates:
   - post
-- type: jekyll-pages
-  label: Pages
-  create: all
-  templates:
-  - landing-page
-  - page
-- type: directory
-  path: _people
-  label: People
-  create: all
-  match: "*"
-  templates:
-  - person
-- type: directory
-  path: _projects
-  label: Projects
-  create: all
-  match: "*"
-  templates:
-  - project
-- type: document
-  path: _data/information.yml
-  label: Contact Information
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
